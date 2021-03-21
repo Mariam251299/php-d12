@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Intro</title>
+    <title>Introducción a PHP</title>
 </head>
 <body>
     <h1>Manejador de tareas</h1>
@@ -43,9 +43,9 @@
 
     <h2>Lista de Tareas</h2>
     <?php
-    $sql ="SELECT * FROM tareas";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
+    $sql ="SELECT * FROM tareas"; //selecciona todos los campos de tareas
+    $stmt = $conn->prepare($sql); //stmt=statement: ahi se quedan todos los datos
+    $stmt->execute(); 
 
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
